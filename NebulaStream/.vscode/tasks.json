@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Frontend: install",
+      "type": "shell",
+      "command": "npm install",
+      "options": {
+        "cwd": "${workspaceFolder}/Application-Code"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Frontend: dev",
+      "type": "npm",
+      "script": "dev",
+      "path": "Application-Code",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "vite",
+        "pattern": {
+          "regexp": "^$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".*",
+          "endsPattern": ".*Local.*http://localhost:.*5173.*"
+        }
+      }
+    },
+    {
+      "label": "Frontend: build",
+      "type": "npm",
+      "script": "build",
+      "path": "Application-Code",
+      "problemMatcher": "$tsc"
+    }
+  ]
+}

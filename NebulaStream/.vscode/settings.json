@@ -1,0 +1,11 @@
+{
+  "typescript.tsdk": "Application-Code/node_modules/typescript/lib",
+  "npm.packageManager": "npm",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true
+  },
+  "files.exclude": {
+    "**/node_modules": true
+  }
+}
